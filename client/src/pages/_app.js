@@ -19,16 +19,13 @@ export default function App({ Component, pageProps }) {
   Router.events.on('routeChangeError', () => setLoading(false));
 
   return (
-    <>
-      <Toaster />
-   
-
-
-        false ? <Loading /> :
+    
+    false ? <Loading /> :
       <Provider store={store}>
+                  <Toaster />
         <Component {...pageProps} />
       </Provider>
      
-    </>
+   
   );
 }
