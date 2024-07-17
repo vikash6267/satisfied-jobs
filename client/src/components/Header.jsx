@@ -39,21 +39,9 @@ const Header = () => {
     // router.push("/");
   }
 
-  const [token, setToken] = useState(null);
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const storedToken = localStorage.getItem('token');
-      setToken(storedToken || null);
-    }
-  }, []);
-
   
   useEffect(() => {
-    if(token){
-
-      dispatch(currentEmployee());
-    }
+    dispatch(currentEmployee());
   }, []);
 
   /* ---------------- */
