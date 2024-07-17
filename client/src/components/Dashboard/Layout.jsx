@@ -46,8 +46,13 @@ const Layout = ({ children, setTab, tab }) => {
     }
   }, [employee]);
 
+  const token =  localStorage.getItem('token') || null // Ensure token is always a string
+
   useEffect(() => {
-    dispatch(currentEmployee());
+    if(token){
+
+      dispatch(currentEmployee());
+    }
   }, []);
 
   const handelLogout = async () => {
