@@ -39,7 +39,7 @@ const allowedOrigins = [
 app.use(cors({
 	// origin: 'https://demoto.vercel.app',
 	// origin: 'https://satisfiedjob.com',
-	origin: allowedOrigins,
+	origin: "*",
 	credentials: true,
 	optionsSuccessStatus: 200 // Address potential preflight request issues
 }));
