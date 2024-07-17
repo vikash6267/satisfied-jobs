@@ -1,5 +1,5 @@
 const SubSection = require("../models/coursesection")
-const CourseProgress = require("../models/CourseProgress")
+const CourseProgress = require("../models/courseProgress")
 
 exports.updateCourseProgress = async (req, res) => {
   const { courseId, subsectionId } = req.body
