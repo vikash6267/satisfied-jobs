@@ -17,7 +17,7 @@ const config = () => {
 
 export const currentEmployee = (userData) => async (dispatch) => {
     try {
-        dispatch(setLoading(true));
+        // dispatch(setLoading(true));
         const { data } = await axios.post(`${basePath}/current`, null, config());
         dispatch(setEmployee(data.employer));
         dispatch(setLoading(false));
