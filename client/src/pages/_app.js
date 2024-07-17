@@ -21,11 +21,14 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Toaster />
-      {loading ? <Loading /> : (
-        <Provider store={store}>
-          <Component {...pageProps} />
-        </Provider>
-      )}
+   
+
+
+        false ? <Loading /> :
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>
+     
     </>
   );
 }
