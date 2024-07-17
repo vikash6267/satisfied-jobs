@@ -29,17 +29,17 @@ app.use(cookieparser());
 
 // CORS setup
 const allowedOrigins = [
-	'https://satisfied-jobs.vercel.app',
 	'https://demoto.vercel.app',
 	'https://satisfiedjob.com',
 	'http://satisfiedjob.com',
 	'http://localhost:3000',
+	'https://satisfied-jobs.vercel.app',
 ];
 
 app.use(cors({
 	// origin: 'https://demoto.vercel.app',
 	// origin: 'https://satisfiedjob.com',
-	origin: "*",
+	origin: allowedOrigins,
 	credentials: true,
 	optionsSuccessStatus: 200 // Address potential preflight request issues
 }));
