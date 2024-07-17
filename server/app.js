@@ -29,6 +29,7 @@ app.use(cookieparser());
 
 // CORS setup
 const allowedOrigins = [
+	'https://satisfied-job.vercel.app',
 	'https://demoto.vercel.app',
 	'https://satisfiedjob.com',
 	'http://satisfiedjob.com',
