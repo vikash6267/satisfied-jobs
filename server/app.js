@@ -38,13 +38,16 @@ const allowedOrigins = [
 ];
 
 app.use(cors({
-	// origin: 'https://demoto.vercel.app',
-	// origin: 'https://satisfiedjob.com',
-	origin: "*",
-	credentials: true,
-	optionsSuccessStatus: 200 // Address potential preflight request issues
+    origin: function(origin, callback) {
+        if (allowedOrigins.includes(origin) || !origin) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    credentials: true,
+    optionsSuccessStatus: 200 // For legacy browser support
 }));
-
 
 // app.use(cors({x
 // 	origin: "https://final-satisfiend-job.onrender.com/",
