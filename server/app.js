@@ -53,7 +53,6 @@ app.use(loggger('tiny'));
 
 //bodyParser
 app.use(express.json());
-app.options('*', cors(corsOptions));
 app.use(express.urlencoded({ extended: false }));
 
 
