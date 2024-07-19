@@ -34,12 +34,13 @@ const allowedOrigins = [
 	'http://satisfiedjob.com',
 	'http://localhost:3000',
 	'https://satisfied-jobs.vercel.app',
+	
 ];
 
 app.use(cors({
 	// origin: 'https://demoto.vercel.app',
 	// origin: 'https://satisfiedjob.com',
-	origin: allowedOrigins,
+	origin: "*",
 	credentials: true,
 	optionsSuccessStatus: 200 // Address potential preflight request issues
 }));
