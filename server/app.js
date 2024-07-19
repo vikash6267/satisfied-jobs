@@ -37,8 +37,8 @@ const allowedOrigins = [
 	
 ];
 
-app.use(cors({
-    origin: function(origin, callback) {
+const corsOptions = {
+    origin: function (origin, callback) {
         if (allowedOrigins.includes(origin) || !origin) {
             callback(null, true);
         } else {
@@ -46,8 +46,12 @@ app.use(cors({
         }
     },
     credentials: true,
-    optionsSuccessStatus: 200 // For legacy browser support
-}));
+    optionsSuccessStatus: 200,
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    allowedHeaders: ['Content-Type', 'Authorization']
+};
+
+app.use(cors(corsOptions));
 
 // app.use(cors({x
 // 	origin: "https://final-satisfiend-job.onrender.com/",
@@ -61,6 +65,7 @@ app.use(loggger('tiny'));
 
 //bodyParser
 app.use(express.json());
+app.options('*', cors(corsOptions));
 app.use(express.urlencoded({ extended: false }));
 
 
@@ -88,6 +93,12 @@ app.all('*', (req, res, next) => {
 	next(new ErrorHandler(`Requested URL NOT FOUND ${req.url}`, 404));
 });
 app.use(generatedErrors);
+
+
+
+app.get('/api/test', (req, res) => {
+    res.json({ message: 'CORS is working!' });
+});
 
 app.listen(
 	process.env.PORT,
