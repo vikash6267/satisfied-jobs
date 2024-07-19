@@ -26,32 +26,20 @@ cloudinaryConnect();
 // Express-Session , Cookie-parser
 const cookieparser = require('cookie-parser');
 app.use(cookieparser());
-
 // CORS setup
-const allowedOrigins = [
-	'https://demoto.vercel.app',
-	'https://satisfiedjob.com',
-	'http://satisfiedjob.com',
-	'http://localhost:3000',
-	'https://satisfied-jobs.vercel.app',
-	
-];
-
-const corsOptions = {
-    origin: function (origin, callback) {
-        if (allowedOrigins.includes(origin) || !origin) {
-            callback(null, true);
-        } else {
-            callback(new Error('Not allowed by CORS'));
-        }
-    },
+app.use(cors({
+    origin: [
+        'https://demoto.vercel.app',
+        'https://satisfiedjob.com',
+        'http://satisfiedjob.com',
+        'http://localhost:3000',
+        'https://satisfied-jobs.vercel.app'
+    ],
     credentials: true,
-    optionsSuccessStatus: 200,
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    allowedHeaders: ['Content-Type', 'Authorization']
-};
-
-app.use(cors(corsOptions));
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    optionsSuccessStatus: 200
+}));
 
 // app.use(cors({x
 // 	origin: "https://final-satisfiend-job.onrender.com/",
