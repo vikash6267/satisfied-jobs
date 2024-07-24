@@ -36,8 +36,8 @@ app.use(cors({
         'https://satisfied-jobs.vercel.app'
     ],
     credentials: true,
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    allowedHeaders: ['Content-Type', 'Authorization'],
+    // methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    // allowedHeaders: ['Content-Type', 'Authorization'],
     optionsSuccessStatus: 200
 }));
 
