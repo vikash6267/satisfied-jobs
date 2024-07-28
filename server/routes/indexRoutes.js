@@ -43,7 +43,7 @@ router.post('/student/signup', studentsignup);
 router.post('/student/validation', activateStudnet);
 
 // POST /student/signin
-router.post('/student/signin', studentsignin);
+router.post('/student/signIN', studentsignin);
 
 // GET /student/signout
 router.get('/student/signout', isAuthenticated, studentsignout);

@@ -23,7 +23,7 @@ const config = () => {
 export const loginStudent = (userData) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
-    const { data } = await axios.post(`${basePath}/student/signin`, {
+    const { data } = await axios.post(`${basePath}/student/signIN`, {
       ...userData,
     });
     localStorage.setItem("token", data.token);
