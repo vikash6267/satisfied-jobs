@@ -115,7 +115,8 @@ exports.activateStudnet = catchAsyncError(async (req, res, next) => {
 
 exports.studentsignin = catchAsyncError(async (req, res, next) => {
   console.log("enter")
-  const student = await Student.findOne({ email: req.body.email })
+  try {
+    const student = await Student.findOne({ email: req.body.email })
     .select("+password")
     .exec();
 
@@ -128,6 +129,9 @@ exports.studentsignin = catchAsyncError(async (req, res, next) => {
   if (!isMatch) return next(new ErrorHandler("Wrong Credientials", 500));
 
   sendtoken(student, 200, res, req);
+  } catch (error) {
+    console.log(error)
+  }
 });
 
 exports.studentsignout = catchAsyncError(async (req, res, next) => {
