@@ -114,6 +114,7 @@ exports.activateStudnet = catchAsyncError(async (req, res, next) => {
 });
 
 exports.studentsignin = catchAsyncError(async (req, res, next) => {
+  console.log("enter")
   const student = await Student.findOne({ email: req.body.email })
     .select("+password")
     .exec();
