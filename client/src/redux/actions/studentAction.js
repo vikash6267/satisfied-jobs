@@ -7,7 +7,8 @@ import {
   setPage,
   setStudent,
 } from "../sclices/studentSclice";
-const basePath = `https://satisfied-jobs.onrender.com/user`;
+const basePath = `${process.env.NEXT_PUBLIC_REACT_APP_API_URL}/userS`;
+
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
