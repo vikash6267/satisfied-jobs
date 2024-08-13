@@ -7,7 +7,7 @@ import {
   setPage,
   setStudent,
 } from "../sclices/studentSclice";
-const basePath = `${process.env.NEXT_PUBLIC_REACT_APP_API_URL}/userS`;
+const basePath = `${process.env.NEXT_PUBLIC_REACT_APP_API_URL}/user`;
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
