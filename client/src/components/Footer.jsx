@@ -14,7 +14,11 @@ const Footer = () => {
         <div>
           <div className="flex  gap-[20px]">
             <div className="w-[80px] flex  items-center justify-center">
-            <img src="https://res.cloudinary.com/dcj2gzytt/image/upload/v1710332234/avaters/yeixhkqcfb4t15gxgqzh.jpg" className="w-[60px]" alt="" />
+              <img
+                src="https://res.cloudinary.com/dcj2gzytt/image/upload/v1710332234/avaters/yeixhkqcfb4t15gxgqzh.jpg"
+                className="w-[60px]"
+                alt=""
+              />
             </div>
             <div className="flex flex-col gap-2">
               <p className="text-[17px] font-semibold">
@@ -24,7 +28,10 @@ const Footer = () => {
                 <FaFacebookSquare />
                 <FaTwitter />
                 <FaLinkedin />
-                <FaInstagram />
+                <a href="https://www.instagram.com/satisfied.job/?igsh=MWh1bTNkOGZjdmoyaQ%3D%3D">
+                  {" "}
+                  <FaInstagram />
+                </a>
                 <FaYoutube />
               </div>
             </div>
@@ -39,9 +46,17 @@ const Footer = () => {
 
         <div className="md:w-[450px] flex items-center justify-center gap-6 rounded-lg md:min-h-[25vh] text-black bg-white py-[10px] px-[10px] md:px-[10px] md:py-[20px]">
           <div className="flex flex-col items-start gap-2 justify-start">
-            <p className="text-[16px] md:text-[22px] font-semibold">Apply on the go</p>
+            <p className="text-[16px] md:text-[22px] font-semibold">
+              Apply on the go
+            </p>
             <p>Get real time job updates on our App</p>
-            <img src="playstore.png" className="w-[120px] md:w-[150px] -mx-2" alt="" />
+            <a href="https://play.google.com/store/search?q=satisfied+job&c=apps">
+              <img
+                src="playstore.png"
+                className="w-[120px] md:w-[150px] -mx-2"
+                alt=""
+              />
+            </a>
           </div>
           <div>
             <img src="./qr.png" className="w-[100px] md:w-[120px]" alt="" />
