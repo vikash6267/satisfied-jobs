@@ -50,15 +50,16 @@ const Footer = () => {
 
         <div className="md:w-[450px] flex items-center justify-center gap-6 rounded-lg md:min-h-[25vh] text-black bg-white py-[10px] px-[10px] md:px-[10px] md:py-[20px]">
           <div className="flex flex-col items-start gap-2 justify-start">
-            <p className="text-[16px] md:text-[22px] font-semibold">
-              Apply on the go
-            </p>
-            <p>Get real-time job updates on our App</p>
             <a
               href="https://play.google.com/store/search?q=satisfied+job&c=apps"
               target="_blank"
               rel="noopener noreferrer"
             >
+              <p className="text-[16px] md:text-[22px] font-semibold">
+                Apply on the go
+              </p>
+              <p>Get real-time job updates on our App</p>
+
               <img
                 src="playstore.png"
                 className="w-[120px] md:w-[150px] -mx-2"
@@ -66,13 +67,13 @@ const Footer = () => {
               />
             </a>
           </div>
-          <div>
+          <a href="https://play.google.com/store/search?q=satisfied+job&c=apps">
             <img
               src="./qr.png"
               className="w-[100px] md:w-[120px]"
               alt="QR Code"
             />
-          </div>
+          </a>
         </div>
       </div>
     </Container>
