@@ -26,11 +26,14 @@ const Footer = () => {
                 Follow us on social media
               </p>
               <div className="flex items-center mt-2 gap-4 text-[20px]">
+                <a href="https://www.facebook.com/profile.php?id=61553922564770&mibextid=ZbWKwL">
                 <FaFacebookSquare />
+
+                </a>
                 <FaTwitter />
                 <FaLinkedin />
                 <a
-                  href="https://www.instagram.com/satisfied.job/?igsh=MWh1bTNkOGZjdmoyaQ%3D%3D"
+                  href="https://www.instagram.com/satisfied.job?igsh=MWh1bTNkOGZjdmoyaQ=="
                   target="_blank"
                   rel="noopener noreferrer"
                 >
